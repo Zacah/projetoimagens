@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color:#fff;
+    display:flex;
+    border-bottom:  16px solid #141f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2{
+    margin-bottom: 8px;
+}
+
+input, button{
+    padding: 8px;
+}
+
+button{
+    background-color:  #009432;
+    border:none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex;/*alinhar os itens umdo lado do outro*/
+    flex-wrap: wrap;/*cria uma nova linha quando ja estiver tudo ocupado*/
+}
+
+ul li{
+    max-width: 25%;
+    list-style: none;/*remover os pontos da lista*/
+    position:relative;/*usado junto ao position absolute,nesse caso fica abaixo li img*/
+    max-height: 280px;/*altura maxima*/
+    overflow-y:hidden;/*exclui o conteudo maior que o max-height*/
+}
+
+ul li img{
+    width: 100%;
+}
+
+.overlay-imagem-link{/*class se puxa pelo ponto*/
+    padding: 16px;
+    background-color:rgba(0, 0, 0, 0.7);
+    position: absolute; /*posiciona o elemento no canto inferior*/
+    bottom: 0; /*coloca o elemento na estremidade*/
+    left: 0;
+    width: 100%;/*tamanho do elemento*/
+    opacity: 0;/*remove a opacidade do elemento*/
+    transition:all ease .5s ;/*adiciona efeito de transição*/
+}
+
+.overlay-imagem-link a{
+    color: #fff;
+    text-decoration: none;/*remove o handline das letras*/
+}
+
+ul li:hover .overlay-imagem-link{/*adiciona evento ao elemento*/
+    opacity: 1;/*volta a aparecer*/
+}
+
+
